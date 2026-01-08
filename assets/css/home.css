@@ -1,12 +1,12 @@
 :root {
-    --primary: #541D66;
+    --primary: #7E2B98;
     --primary-dark: #620fb5;
     --background-light: #f7f6f8;
     --background-dark: #191022;
     --card-light: #ffffff;
     --card-dark: #251b2e;
     --text-main: #141118;
-    --text-muted: #FFFCF6;
+    --text-muted: #fcf9f2;
     --border-light: #e0dbe6;
     --border-dark: #382b45;
 }
@@ -71,7 +71,7 @@ body.dark {
 /* Seção Hero */
 .hero-section {
     background: linear-gradient(rgba(25, 16, 34, 0.4) 0%, rgba(25, 16, 34, 0.7) 100%),
-        url("https://lh3.googleusercontent.com/aida-public/AB6AXuAD31S_NCnNsr29PXhFz-1jBGIaCP4uvQqpJR7fpwtuhFbHP1tJprC5KnsQax0cJSaN33hJ7XVTAtqmsUxR-whEqp_FXWp0jFxsY6PBWrS2Kkhd2K5FqsZZylIDiFMEIo4txz-ovCYnhRdJbXYMnbARj5KpXOd5vUNI96f4U-9iONtd-tFewajV2PIIMN4lxnFH9Y4ZTa3ALxsIT04QH9KmLg-1UPox6NDA_-5IffOH8QKA4tgel4fkWxxMOnrUpg9Ebz3Nve6AIV6t");
+        url(../img/Rectangle\ 29.png);
     background-size: cover;
     background-position: center;
     min-height: 500px;
@@ -190,7 +190,7 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: rgba(127, 19, 236, 0.1);
-    color: var(--primary);
+    color: var(--text-muted);
 }
 
 /* Animações */
