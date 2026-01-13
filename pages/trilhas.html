@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Catálogo de Trilhas - Rede Nave</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8e44ad",
+                        "primary-dark": "#620fb5",
+                        "background-light": "#fcfbfc",
+                        "background-neutral": "#f8f9fa",
+                        "card-light": "#ffffff",
+                        "text-main": "#1a161f",
+                        "text-muted": "#645670",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            font-family: "Lexend", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        .growth-gradient {
+            background: linear-gradient(135deg, #7f13ec 0%, #a855f7 100%)
+        }
+        .fabric-pattern {
+            background-image: radial-gradient(#7f13ec 0.5px, transparent 0.5px);
+            background-size: 10px 10px;
+            opacity: 0.1;
+        }
+        .textile-texture {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDJpe49P7YGFxoB_ODX84fYGbBuxhW3Iy31_LsCtCBvc5_XRlwdGZnwOkx2fhiNRJnGI2nAUvkpJJS-qRzxuid6lV5A6xZHkipfH3q8VjkMTBUhtAQ3y1OpkZmShTKr8s_JJWvDA1wd_7MiJHsPHXUaUf8VIzszMxivXN5S9H6rdy0T8kuwQrBBRHDecE9iorL5SnxrWtz3daPYYE0uGbXvnJtNAJZrRIbEx1rqwwvqSVJgEzebfLsMvzcWrfPWGnUmLSZIf1aZOkI');
+            background-blend-mode: overlay;
+        }
+        .step-line::after {
+            content: "";
+            position: absolute;
+            left: 1.25rem;
+            top: 2.5rem;
+            bottom: -1rem;
+            width: 2px;
+            background: #e0dbe6;
+        }
+        .step-line:last-child::after {
+            display: none
+        }
+    </style>
+</head>
+
+<body class="bg-background-neutral text-text-main transition-colors duration-200">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-[#e0dbe6] dark:border-[#382b45] bg-white/90 dark:bg-[#191022]/90 backdrop-blur-md px-6 py-3 lg:px-10">
+            <div class="flex items-center gap-4">
+                <div class="flex h-10 w-14 items-center justify-center rounded-lg">
+                    <img src="/assets/img/logo-redeNave 1.png" alt="logo da rede nave">
+                </div>
+
+            </div>
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-6">
+                    <a class="text-lg font-medium leading-normal text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors"
+                        href="#">Início</a>
+                    <a class="text-lg font-medium leading-normal text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors"
+                        href="#">Trilhas</a>
+                    <a class="text-lg font-medium leading-normal text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors"
+                        href="#">Eventos</a>
+                    <a class="text-lg font-medium leading-normal text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors"
+                        href="#">Sobre</a>
+                </nav>
+                <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold leading-normal">
+                    <span class="truncate">Entrar</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Icon (Placeholder) -->
+            <button class="md:hidden p-2 text-text-main dark:text-white">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+        <main class="flex flex-col items-center">
+            <section class="w-full bg-white py-16 lg:py-20 border-b border-[#e0dbe6] relative overflow-hidden">
+                <div class="absolute inset-0 fabric-pattern pointer-events-none"></div>
+                <div class="max-w-[1200px] mx-auto px-6 lg:px-10 relative z-10">
+                    <div class="max-w-3xl">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                            <span class="text-primary font-bold tracking-widest text-xs uppercase">Vitrine de
+                                Conhecimento</span>
+                        </div>
+                        <h1 class="text-4xl lg:text-6xl font-black mb-6 leading-tight text-text-main">Conheça nossas
+                            <span class="text-primary">Trilhas de Formação</span></h1>
+                        <p class="text-text-muted text-xl mb-8 leading-relaxed">
+                            Explore jornadas formativas desenhadas para a inserção qualificada no mercado e o
+                            fortalecimento do empreendedorismo social feminino. Transforme seu fazer manual em autonomia
+                            financeira.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition-all shadow-md"
+                                href="#trilhas">Explorar Trilhas</a>
+                            <a class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/5 transition-all"
+                                href="#">Quem somos</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="w-full max-w-[1200px] px-6 py-16 lg:px-10 space-y-20" id="trilhas">
+                <div
+                    class="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl p-6 lg:p-12 border border-[#e0dbe6] shadow-sm relative overflow-hidden group">
+                    <div class="lg:w-2/5">
+                        <div class="relative h-80 rounded-2xl overflow-hidden mb-8">
+                            <img alt="Autonomia Feminina"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9fSDGj6wVaS6xJET6WMM8FmH5E3NsjYPmjQp4CRHzBp6Wgwm884Ork3iqwqO9hT15qrzF-PBkpTbuFJAPhK3awwoSXXOypoxLjN_BZCgONbkWHZn-QmXhc--XVaucQAsrirBtjUEUodTpbwLr95S--s6_5zL9RoAT1aVIXB-fFZsh91UBL8_Yy-T7pgL_1g5kziSzsdI2OMcti7xfHrgsPXlFBFWBFfeqI27qRWBoQRHRhd_pMdkNmk_xeEidDMvz7rO3B9vD9CAr" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <span
+                                    class="bg-primary px-4 py-1.5 rounded-full text-white text-xs font-bold uppercase tracking-widest">Negócios
+                                    &amp; Carreira</span>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-black mb-4 leading-tight">Autonomia e Empreendedorismo Feminino</h3>
+                        <p class="text-text-muted mb-8 leading-relaxed">
+                            Uma jornada completa para mulheres que desejam transformar suas habilidades em negócios
+                            sustentáveis, focando no protagonismo e na gestão financeira consciente.
+                        </p>
+                        <div class="space-y-6 mb-10">
+                            <div class="flex flex-col gap-2">
+                                <span class="text-xs font-bold uppercase text-primary tracking-widest">Objetivo
+                                    Principal</span>
+                                <p class="text-sm text-text-main">Capacitar mulheres para a gestão de seus próprios
+                                    recursos e o desenvolvimento de liderança comunitária.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6 pt-4 border-t border-gray-100">
+                                <div class="flex flex-col">
+                                    <span class="text-2xl font-black text-primary">06</span>
+                                    <span class="text-xs font-bold text-text-muted uppercase">Módulos</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-2xl font-black text-primary">30h</span>
+                                    <span class="text-xs font-bold text-text-muted uppercase">Duração</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full growth-gradient hover:opacity-90 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                            Ver detalhes da inscrição <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                    <div class="lg:w-3/5">
+                        <h4 class="text-xl font-bold mb-8 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">list_alt</span>
+                            O que você irá aprender
+                        </h4>
+                        <div class="space-y-0">
+                            <div class="relative pl-12 pb-10 step-line">
+                                <div
+                                    class="absolute left-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center z-10 border border-primary/20">
+                                    <span class="material-symbols-outlined text-xl">payments</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-2">Geração de Renda e Sustentabilidade</h5>
+                                    <p class="text-sm text-text-muted leading-relaxed">Desenvolva uma visão estratégica
+                                        sobre precificação justa, fluxo de caixa e como tornar sua atividade
+                                        economicamente viável a longo prazo.</p>
+                                </div>
+                            </div>
+                            <div class="relative pl-12 pb-10 step-line">
+                                <div
+                                    class="absolute left-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center z-10 border border-primary/20">
+                                    <span class="material-symbols-outlined text-xl">campaign</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-2">Protagonismo e Liderança Comunitária</h5>
+                                    <p class="text-sm text-text-muted leading-relaxed">Técnicas de comunicação
+                                        assertiva, negociação e como organizar coletivos para fortalecer a economia
+                                        local.</p>
+                                </div>
+                            </div>
+                            <div class="relative pl-12 step-line">
+                                <div
+                                    class="absolute left-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center z-10 border border-primary/20">
+                                    <span class="material-symbols-outlined text-xl">store</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-2">Redes de Apoio e Comercialização</h5>
+                                    <p class="text-sm text-text-muted leading-relaxed">Estratégias para inserir seus
+                                        produtos em mercados locais, feiras solidárias e canais de venda digitais.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col lg:flex-row-reverse gap-12 bg-white rounded-3xl p-6 lg:p-12 border border-[#e0dbe6] shadow-sm relative overflow-hidden group">
+                    <div class="lg:w-2/5">
+                        <div class="relative h-80 rounded-2xl overflow-hidden mb-8">
+                            <img alt="Artesanato Criativo"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo-mIXrK25Ya-bMgVlSOy2uOClkpOF3GLegew5bF-2jsoonsB8pYn9Vu8pHrNoLWOt4qidJmd5EFF83GUJBzdPl_TkrnadDMvnhdgtuQDLIG1_oFkj_QYO298BEmD6LsPprlYVR2ULsgWT-rToHpbJj9BMBNaceihMGFj8p7SYzqtPH9Rqbug3La0dydDk7dmgsbi1Hmjlf9XRds_rHkDyCc-14zfM2nn4gMLukjIoxJsvLddCpsNZ0o0G6WHhmGIAoPumWoId5qor" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <span
+                                    class="bg-primary px-4 py-1.5 rounded-full text-white text-xs font-bold uppercase tracking-widest">Fazer
+                                    Manual</span>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-black mb-4 leading-tight">Artesanato e Economia Criativa</h3>
+                        <p class="text-text-muted mb-8 leading-relaxed">
+                            Resgate saberes ancestrais e aprenda técnicas contemporâneas de design e reaproveitamento
+                            para criar produtos com identidade e valor cultural.
+                        </p>
+                        <div class="space-y-6 mb-10">
+                            <div class="flex flex-col gap-2">
+                                <span
+                                    class="text-xs font-bold uppercase text-primary tracking-widest">Diferencial</span>
+                                <p class="text-sm text-text-main">Foco em técnicas de upcycling e design autoral,
+                                    promovendo a sustentabilidade ambiental e financeira.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6 pt-4 border-t border-gray-100">
+                                <div class="flex flex-col">
+                                    <span class="text-2xl font-black text-primary">08</span>
+                                    <span class="text-xs font-bold text-text-muted uppercase">Oficinas</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-2xl font-black text-primary">40h</span>
+                                    <span class="text-xs font-bold text-text-muted uppercase">Carga Horária</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full bg-white border-2 border-primary text-primary font-bold py-4 rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+                            Conhecer as oficinas <span class="material-symbols-outlined">palette</span>
+                        </button>
+                    </div>
+                    <div class="lg:w-3/5">
+                        <h4 class="text-xl font-bold mb-8 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">handyman</span>
+                            Oficinas em Destaque
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="p-6 rounded-2xl border border-[#e0dbe6] bg-background-neutral hover:border-primary transition-all group/card">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white text-primary flex items-center justify-center mb-4 shadow-sm group-hover/card:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">texture</span>
+                                </div>
+                                <h5 class="font-bold mb-2">Tecendo Saberes</h5>
+                                <p class="text-sm text-text-muted">Resgate de técnicas ancestrais de tecelagem manual e
+                                    tingimento com pigmentos naturais.</p>
+                            </div>
+                            <div
+                                class="p-6 rounded-2xl border border-[#e0dbe6] bg-background-neutral hover:border-primary transition-all group/card">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white text-primary flex items-center justify-center mb-4 shadow-sm group-hover/card:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">recycling</span>
+                                </div>
+                                <h5 class="font-bold mb-2">Entrelaços</h5>
+                                <p class="text-sm text-text-muted">Criação de acessórios e utilitários contemporâneos a
+                                    partir do reaproveitamento de tecidos e fibras.</p>
+                            </div>
+                            <div
+                                class="p-6 rounded-2xl border border-[#e0dbe6] bg-background-neutral hover:border-primary transition-all group/card">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white text-primary flex items-center justify-center mb-4 shadow-sm group-hover/card:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">photo_camera</span>
+                                </div>
+                                <h5 class="font-bold mb-2">Vitrine Criativa</h5>
+                                <p class="text-sm text-text-muted">Oficina prática de fotografia e storytelling para
+                                    artesãs divulgarem seus produtos.</p>
+                            </div>
+                            <div
+                                class="p-6 rounded-2xl border border-[#e0dbe6] bg-background-neutral hover:border-primary transition-all group/card">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white text-primary flex items-center justify-center mb-4 shadow-sm group-hover/card:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">groups</span>
+                                </div>
+                                <h5 class="font-bold mb-2">Gestão de Cooperativas</h5>
+                                <p class="text-sm text-text-muted">Princípios da economia solidária para a organização
+                                    de grupos produtivos de mulheres.</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-6 bg-primary/5 rounded-2xl border border-primary/10">
+                            <p class="text-sm font-medium text-primary italic">
+                                * Nossas oficinas incluem materiais básicos para alunas inscritas em vulnerabilidade
+                                social.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-primary/5 rounded-3xl p-8 lg:p-16 border-2 border-dashed border-primary/20 text-center relative overflow-hidden">
+                    <div class="absolute -left-10 -top-10 w-40 h-40 fabric-pattern rounded-full"></div>
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 fabric-pattern rounded-full"></div>
+                    <div class="relative z-10">
+                        <h4 class="text-3xl font-black mb-6">Por que se formar com a Rede Nave?</h4>
+                        <p class="text-text-muted mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
+                            Mais do que cursos, oferecemos um ecossistema de apoio. Ao concluir sua jornada, você terá
+                            acesso ao nosso marketplace exclusivo, feiras itinerantes e mentorias individuais com
+                            mulheres experientes no mercado.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-10">
+                            <div class="flex flex-col items-center gap-3">
+                                <div
+                                    class="w-20 h-20 rounded-2xl bg-white shadow-xl flex items-center justify-center text-primary group hover:-translate-y-2 transition-all">
+                                    <span class="material-symbols-outlined text-4xl">workspace_premium</span>
+                                </div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-text-main">Certificado
+                                    Solidário</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-3">
+                                <div
+                                    class="w-20 h-20 rounded-2xl bg-white shadow-xl flex items-center justify-center text-primary group hover:-translate-y-2 transition-all">
+                                    <span class="material-symbols-outlined text-4xl">local_mall</span>
+                                </div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-text-main">Marketplace de
+                                    Alunas</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-3">
+                                <div
+                                    class="w-20 h-20 rounded-2xl bg-white shadow-xl flex items-center justify-center text-primary group hover:-translate-y-2 transition-all">
+                                    <span class="material-symbols-outlined text-4xl">diversity_1</span>
+                                </div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-text-main">Mentoria de
+                                    Pares</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="w-full bg-[#1a161f] text-white py-20 px-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+                <div class="max-w-[800px] mx-auto text-center relative z-10">
+                    <h2 class="text-4xl lg:text-5xl font-black mb-8">Faça parte desta rede</h2>
+                    <p class="text-gray-400 text-lg mb-12 leading-relaxed">
+                        A Rede Nave é construída por mãos femininas. Seja como aluna, facilitadora ou parceira, sua
+                        participação fortalece o caminho para a independência de centenas de mulheres.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <button
+                            class="bg-primary hover:bg-primary-dark px-12 py-5 rounded-xl font-bold transition-all shadow-xl">Inscrever-se
+                            agora</button>
+                        <button
+                            class="bg-white/5 hover:bg-white/10 border border-white/20 px-12 py-5 rounded-xl font-bold transition-all">Falar
+                            com uma consultora</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <footer
+            class="mt-auto w-full bg-primary dark:bg-[#110a17] py-12 px-6 border-t border-[#e0dbe6] dark:border-[#2d2238]">
+            <div class="mx-auto max-w-[960px] flex flex-col md:flex-row justify-between gap-10">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-text-main dark:text-white">
+                        <span class="material-symbols-outlined text-primary">rocket_launch</span>
+                        <span class="text-lg font-bold">Rede Nave</span>
+                    </div>
+                    <p class="text-x1 text-white dark:text-gray-500 max-w-[280px]">
+                        Empoderando mulheres através da educação e tecnologia. Junte-se a nós nessa jornada.
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                        <a class="text-white dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="https://www.facebook.com/redenave" target="_blank">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-7 w-7" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.49 0-1.953.925-1.953 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a class="text-white dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="https://www.instagram.com/rede_nave" target="_blank">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-7 w-7" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </svg>
+                        </a>
+                        <a class="text-white dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="https://www.youtube.com/@redenave" target="_blank">
+                            <span class="sr-only">Youtube</span>
+                            <svg class="h-7 w-7" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.121 2.136c1.872.505 9.377.505 9.377.505s7.505 0 9.376-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-10 sm:grid-cols-3">
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-x1 font-bold text-text-main dark:text-white">Plataforma</h4>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Cursos</a>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Mentorias</a>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Comunidade</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-x1 font-bold text-text-main dark:text-white">Empresa</h4>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Sobre Nós</a>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Carreiras</a>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Imprensa</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-x1 font-bold text-text-main dark:text-white">Suporte</h4>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Central de
+                            Ajuda</a>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Contato</a>
+                        <a class="text-x1 text-white dark:text-gray-500 hover:text-primary" href="#">Privacidade</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto mt-10 max-w-[960px] border-t border-[#f2f0f4] dark:border-[#2d2238] pt-6 text-center">
+                <p class="text-x1 text-white dark:text-gray-600">
+                    “© 2025 Rede NAVE — Natureza, Arte, Vida e Emancipação Feminina. Todos os direitos reservados
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
